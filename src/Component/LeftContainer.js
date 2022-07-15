@@ -17,7 +17,7 @@ export default function LeftContainer(props) {
             class="col-1"
             style={{
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >

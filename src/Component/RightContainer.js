@@ -54,7 +54,7 @@ export default function RightContainer(props) {
         </div>
         <div className="row">
           <div
-            className="col-9"
+            className="col-8"
             style={{
               textAlign: "left",
               color: "#202020",
@@ -66,7 +66,7 @@ export default function RightContainer(props) {
           </div>
           <div
             style={{ textAlign: "right", color: "#f57224" }}
-            className="col-3"
+            className="col-4"
           >
             đ 0
           </div>

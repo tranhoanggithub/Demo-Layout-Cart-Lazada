@@ -15,10 +15,10 @@ export default function Form() {
       style={{ width: "100%", backgroundColor: "#F4F4F4" }}
     >
       <div class="row">
-        <div class="col-9">
+        <div class="col-9" style={{ paddingTop: "30px" }}>
           <LeftContainer total={total} />
         </div>
-        <div class="col-2" style={{ marginTop: "30px" }}>
+        <div class="col-3" style={{ marginTop: "30px" }}>
           <RightContainer total={total} callbackTotal={callbackTotal()} />
         </div>
       </div>

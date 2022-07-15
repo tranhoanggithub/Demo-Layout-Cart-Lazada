@@ -45,7 +45,7 @@ export default function SelectPage() {
           justifyContent: "end",
         }}
       >
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
           {" "}
           <i
             class="fa fa-trash"
