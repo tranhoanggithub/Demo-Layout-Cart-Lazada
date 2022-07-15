@@ -1,6 +1,5 @@
 import React from "react";
 import LeftContainer from "./LeftContainer";
-import Navbar from "./Navbar";
 import RightContainer from "./RightContainer";
 import { useState } from "react";
 
@@ -16,10 +15,7 @@ export default function Form() {
       style={{ width: "100%", backgroundColor: "#F4F4F4" }}
     >
       <div class="row">
-        <Navbar />
-      </div>
-      <div class="row">
-        <div class="col-7" style={{ marginTop: "30px" }}>
+        <div class="col-9">
           <LeftContainer total={total} />
         </div>
         <div class="col-2" style={{ marginTop: "30px" }}>
