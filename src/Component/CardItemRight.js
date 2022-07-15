@@ -13,12 +13,20 @@ export default function CardItemRight(props) {
     console.log(total);
   };
   return (
-    <div>
-      <button onClick={() => DownProduct()} type="button" class="btn btn-info">
+    <div className="CardItemRight">
+      <button
+        onClick={() => DownProduct()}
+        type="button"
+        class="button-dow-item-right"
+      >
         -
       </button>
-      1
-      <button onClick={() => UpProduct()} type="button" class="btn btn-warning">
+      <div style={{ padding: "10px 15px" }}>1</div>
+      <button
+        onClick={() => UpProduct()}
+        type="button"
+        class="button-up-item-right"
+      >
         +
       </button>
     </div>

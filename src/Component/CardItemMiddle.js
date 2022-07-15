@@ -4,29 +4,30 @@ export default function CardItemMiddle() {
   return (
     <div className="container">
       <div className="row">
-        <p style={{ color: "red" }}>199.000đ</p>
+        <p style={{ color: "red", textAlign: "left", height: "20px" }}>
+          đ 199.000
+        </p>
       </div>
       <div
-        className="row"
         style={{
           display: "flex",
-          flexDirection: "inherit",
-          alignContent: "center",
+          textAlign: "center",
+          alignItems: "center",
         }}
       >
-        <div className="col-6">
+        <div>
           <i
-            style={{ cursor: "pointer", fontSize: "20px" }}
+            style={{ cursor: "pointer", fontSize: "18px", padding: "5px 5px" }}
             class="fa fa-heart"
             aria-hidden="true"
           ></i>
         </div>
-        <div className="col-6">
-          <i
-            style={{ cursor: "pointer", fontSize: "20px" }}
+        <div>
+          <i18
+            style={{ cursor: "pointer", fontSize: "18px", padding: "5px 5px" }}
             class="fa fa-trash"
             aria-hidden="true"
-          ></i>
+          ></i18>
         </div>
       </div>
     </div>

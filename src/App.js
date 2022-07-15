@@ -4,7 +4,7 @@ import Form from "./Component/Form";
 
 function App() {
   return (
-    <div>
+    <div style={{ background: "#F4F4F4" }}>
       <Form />
     </div>
   );

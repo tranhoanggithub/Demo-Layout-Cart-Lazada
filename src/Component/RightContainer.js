@@ -7,34 +7,74 @@ export default function RightContainer(props) {
 
   return (
     <form>
-      <div className="container">
+      <div className="container RightContainer ">
+        <div
+          className="row"
+          style={{
+            color: "#212121",
+            textAlign: "left",
+            fontSize: "18px",
+            padding: "10px 10px",
+          }}
+        >
+          Order Summary
+        </div>
         <div className="row">
-          <p
+          <div
+            className="col-9"
             style={{
-              color: "red",
-              fontSize: "20px",
-              textAlign: "center",
-              fontWeight: "bold",
+              textAlign: "left",
+              color: "#757575",
+              padding: "5px",
+              fontSize: "14px",
+              padding: "10px 10px",
             }}
           >
-            THÔNG TIN ĐƠN HÀNG
-          </p>
+            Shipping Fee
+          </div>
+          <div style={{ textAlign: "right" }} className="col-3">
+            đ 0
+          </div>
         </div>
         <div className="row">
-          <div className="col-8" style={{ textAlign: "left" }}>
-            Tổng cộng
-          </div>
           <div
-            className="col-4"
-            style={{ textAlign: "right", fontSize: "30px", color: "red" }}
+            className="col-9"
+            style={{
+              textAlign: "left",
+              color: "#757575",
+              padding: "10px 10px",
+              fontSize: "14px",
+            }}
           >
-            <p>{total} đồng</p>
+            Subtotal (0 items)
+          </div>
+          <div style={{ textAlign: "right" }} className="col-3">
+            đ 0
           </div>
         </div>
+        <div className="row">
+          <div
+            className="col-9"
+            style={{
+              textAlign: "left",
+              color: "#202020",
+              padding: "10px 10px",
+              fontSize: "14px",
+            }}
+          >
+            Total
+          </div>
+          <div
+            style={{ textAlign: "right", color: "#f57224" }}
+            className="col-3"
+          >
+            đ 0
+          </div>
+        </div>
+        <button type="submit" style={{ width: "100%" }} class="btn-submit-cart">
+          COMFIRM CART(0)
+        </button>
       </div>
-      <button type="submit" style={{ width: "100%" }} class="btn btn-danger">
-        Xác nhận giỏ hàng
-      </button>
     </form>
   );
 }
