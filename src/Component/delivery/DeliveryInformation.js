@@ -63,20 +63,20 @@ export default function DeliveryInformation() {
                   <option>Default select</option>
                 </select>
               </div>
-              <label for="exampleFormControlInput1">
+              <label className=" m-3" for="exampleFormControlInput1">
                 Select a label for effective delivery:
               </label>
               <div className="d-flex">
-                <button type="button" class="btn btn-outline-primary m-4 p-3">
+                <button type="button" class="btn btn-outline-primary  m-2 p-3">
                   OFFICE
                 </button>
 
-                <button type="button" class="btn btn-outline-danger m-4 p-3">
-                  Home
+                <button type="button" class="btn btn-outline-danger m-2 p-3">
+                  HOME
                 </button>
               </div>
-              <button type="button" className="btn btn-rg btn-info d-flex">
-                Save
+              <button type="button" className=" btn bg-info d-flex">
+                SAVE
               </button>
             </div>
           </div>

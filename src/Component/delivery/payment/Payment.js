@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const Payment = () => {
@@ -5,60 +6,120 @@ const Payment = () => {
     <form>
       <div className="delivery-inf-container">
         <div className="">
-          <div className=" bg-light m-2 text-center p-2">
+          <div
+            className=" m-2 text-center p-2"
+            style={{
+              color: "white",
+              backgroundColor: "rgb(216, 216, 216)",
+            }}
+          >
             <h4> PROCEED TO PAYMENT</h4>
           </div>
           <div className="d-flex">
-            <div className="right col">
+            <div className="right col p-2">
               <div className="">
-                <div className="form  p-4">
-                  <label for="exampleFormControlInput1">
-                    Select Payment Method
-                  </label>
-                  <div className="border border-info">
-                    <div className="bg-info">
+                <div className="form">
+                  <div
+                    className="d-flex py-2"
+                    style={{
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <label for="exampleFormControlInput1">
+                      Select Payment Method
+                    </label>
+                    <a
+                      href="#"
+                      className="badge-primary"
+                      style={{
+                        alignItem: "right",
+                      }}
+                    >
+                      View all methods>
+                    </a>
+                  </div>
+                  <div
+                    className="border border-info "
+                    style={{
+                      borderRadius: "5px",
+                    }}
+                  >
+                    <div
+                      className="d-flex py-3 px-2"
+                      style={{
+                        borderRadius: "5px",
+                        backgroundColor: "rgb(249, 254, 255)",
+                        justifyContent: "space-between",
+                      }}
+                    >
                       <label>Cash On Delivery</label>
+                      <label
+                        style={{
+                          alignItem: "right",
+                          color: "#f57224",
+                        }}
+                      >
+                        Cash On Delivery
+                      </label>
                     </div>
-                    <label>Pay when you receive</label>
+                    <label className="py-2 px-2">Pay when you receive</label>
+                  </div>
+                  <div className="mt-2">
+                    <div
+                      className="border border-light "
+                      style={{
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <div
+                        className="d-flex py-3 px-2"
+                        style={{
+                          borderRadius: "5px",
+                          borderColor: "rgb(216, 216, 216)",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <label>Credit/Debit Card</label>
+                        <label
+                          style={{
+                            alignItem: "right",
+                            color: "#f57224",
+                          }}
+                        >
+                          Cash On Delivery
+                        </label>
+                      </div>
+                      <label className="py-2 px-2">Tap to add card</label>
+                    </div>
                   </div>
                 </div>
-                <div className="form  p-4">
-                  <label for="exampleFormControlInput1">Province</label>
-                  <select class="form-control">
-                    <option>Default select</option>
-                  </select>
-                </div>
               </div>
-              <div className="form col p-4 align-self-end">
-                <label for="exampleFormControlInput1">District</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="name@example.com"
-                ></input>
-              </div>
-              <div className="form col p-4 align-self-end">
-                <label for="exampleFormControlInput1">Ward</label>
-                <select class="form-control">
-                  <option>Default select</option>
-                </select>
-              </div>
-              <label for="exampleFormControlInput1">
-                Select a label for effective delivery:
-              </label>
-              <div className="d-flex">
-                <button type="button" class="btn btn-outline-primary m-4 p-3">
-                  OFFICE
-                </button>
 
-                <button type="button" class="btn btn-outline-danger m-4 p-3">
-                  Home
-                </button>
+              <label for="exampleFormControlInput1">Voucher</label>
+              <div className="d-flex"></div>
+              <div
+                className="d-flex py-2"
+                style={{
+                  justifyContent: "space-between",
+                }}
+              >
+                <label for="exampleFormControlInput1">
+                  Select Payment Method
+                </label>
+                <a
+                  href="#"
+                  className="badge-primary"
+                  style={{
+                    alignItem: "right",
+                  }}
+                >
+                  edit
+                </a>
               </div>
-              <button type="button" className="btn btn-rg btn-info" disabled>
-                Save
-              </button>
+              <div>
+                <label for="exampleFormControlInput1">Order Summary</label>
+                <div className="d-flex"></div>
+              </div>
             </div>
           </div>
         </div>
