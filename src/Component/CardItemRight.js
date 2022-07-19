@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function CardItemRight(props) {
   const [total, setTotal] = useState(Number(props.total));
-  console.log(">>>>>>>>>>.total là trong tinh tien", Number(total));
   const UpProduct = () => {
     setTotal(total + 1);
     console.log(total);
@@ -21,7 +20,9 @@ export default function CardItemRight(props) {
       >
         -
       </button>
-      <div style={{ padding: "10px 15px" }}>1</div>
+
+      <div style={{ padding: "10px 15px" }}>{total > 0 ? total : 0}</div>
+
       <button
         onClick={() => UpProduct()}
         type="button"

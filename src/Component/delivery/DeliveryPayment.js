@@ -5,10 +5,10 @@ export default function DeliveryPayment() {
   return (
     <div className=" bg-light h-100">
       <div
-        className="d-flex"
+        className="d-flex container"
         style={{
           paddingLeft: "250px",
-          paddingRight: "250px",
+          paddingRight: "2  50px",
         }}
       >
         <div className="d-inline m-2 bg-white text-dark col-8 ">

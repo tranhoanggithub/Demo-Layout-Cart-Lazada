@@ -6,11 +6,19 @@ import style from "../assets/scss/style.css";
 import SelectPage from "./SelectPage";
 
 export default function LeftContainer(props) {
-  const { total } = props;
+  const chonAll = props.selectAll;
+  const checkAll = props.checkAll;
+  const toggleCheck = props.toggleCheck;
+  const checked = props.checked;
+  const total = props.total;
+  console.log(
+    ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>props trong chonAll la ",
+    chonAll
+  );
   return (
-    <div>
+    <div className="container">
       {" "}
-      <SelectPage />
+      <SelectPage chonAll={chonAll} checkAll={checkAll} />
       <div className="container LeftContainer">
         <div className="row">
           <div
@@ -21,10 +29,15 @@ export default function LeftContainer(props) {
               alignItems: "center",
             }}
           >
-            <input type="checkbox" style={{ width: "16px", height: "16px" }} />
+            <input
+              onChange={() => toggleCheck("nr1")}
+              checked={checked["nr1"]}
+              type="checkbox"
+              style={{ width: "16px", height: "16px" }}
+            />
           </div>
           <div class="col-7">
-            <CardItemLeft />
+            <CardItemLeft toggleCheck={toggleCheck} />
           </div>
           <div class="col-2">
             <CardItemMiddle />

@@ -1,6 +1,16 @@
 import React from "react";
+import { useState } from "react";
 
-export default function SelectPage() {
+export default function SelectPage(props) {
+  const [checked, setChecked] = useState(false);
+  const handleClick = () => setChecked(!checked);
+  const selecAllText = () => {
+    console.log(">>>>>>>>>>>>>>>>>>>Dax chon input");
+  };
+  const selectAll = props.chonAll;
+
+  const checkedAll = props.checkAll;
+  console.log("XXXXXXXXXXXXXprops ", checkedAll);
   return (
     <div
       style={{
@@ -8,6 +18,7 @@ export default function SelectPage() {
         backgroundColor: "white",
         height: "40px",
         display: "flex",
+        padding: "0px 5px",
       }}
     >
       <div
@@ -19,7 +30,12 @@ export default function SelectPage() {
           paddingRight: "20px",
         }}
       >
-        <input type="checkbox" style={{ width: "16px", height: "16px" }} />
+        <input
+          type="checkbox"
+          style={{ width: "16px", height: "16px" }}
+          onChange={(event) => selectAll(event.target.checked)}
+          checked={checkedAll}
+        />
       </div>
       <div
         className="col-7"
