@@ -4,6 +4,7 @@ import CardItemMiddle from "./CardItemMiddle";
 import CardItemRight from "./CardItemRight";
 import style from "../assets/scss/style.css";
 import SelectPage from "./SelectPage";
+import { PopupProvider } from "react-hook-popup";
 
 export default function LeftContainer(props) {
   const chonAll = props.selectAll;
@@ -11,10 +12,7 @@ export default function LeftContainer(props) {
   const toggleCheck = props.toggleCheck;
   const checked = props.checked;
   const total = props.total;
-  console.log(
-    ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>props trong chonAll la ",
-    chonAll
-  );
+
   return (
     <div className="container">
       {" "}

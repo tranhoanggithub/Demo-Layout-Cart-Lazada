@@ -3,6 +3,7 @@ import LeftContainer from "./LeftContainer";
 import RightContainer from "./RightContainer";
 import { useEffect } from "react";
 import { useState } from "react";
+import { PopupProvider } from "react-hook-popup";
 
 export default function Form() {
   const [checkedAll, setCheckedAll] = useState(false);
@@ -94,13 +95,15 @@ export default function Form() {
     >
       <div className="row">
         <div class="col-9" style={{ paddingTop: "30px" }}>
-          <LeftContainer
-            selectAll={selectAll}
-            checkedAll={checkedAll}
-            toggleCheck={toggleCheck}
-            total={total}
-            checked={checked}
-          />
+          <PopupProvider>
+            <LeftContainer
+              selectAll={selectAll}
+              checkedAll={checkedAll}
+              toggleCheck={toggleCheck}
+              total={total}
+              checked={checked}
+            />
+          </PopupProvider>
         </div>
         <div class="col-3" style={{ marginTop: "30px" }}>
           <RightContainer total={total} callbackTotal={callbackTotal()} />

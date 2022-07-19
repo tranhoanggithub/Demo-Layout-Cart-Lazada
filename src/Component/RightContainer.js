@@ -4,7 +4,12 @@ import { useForm } from "react-hook-form";
 
 export default function RightContainer(props) {
   const { total } = props;
-
+  const DATA = {
+    ShippingFee: 19000,
+    Subtotal: 1908000,
+    Total: 1920000,
+  };
+  console.log(">>>>>>>>>>>>>>>>DATA LÀ", DATA);
   return (
     <form>
       <div className="container RightContainer ">
@@ -33,7 +38,7 @@ export default function RightContainer(props) {
             Shipping Fee
           </div>
           <div style={{ textAlign: "right" }} className="col-3">
-            đ 0
+            {DATA.ShippingFee}
           </div>
         </div>
         <div className="row">
@@ -49,7 +54,7 @@ export default function RightContainer(props) {
             Subtotal (0 items)
           </div>
           <div style={{ textAlign: "right" }} className="col-3">
-            đ 0
+            {DATA.Subtotal}
           </div>
         </div>
         <div className="row">
@@ -68,7 +73,7 @@ export default function RightContainer(props) {
             style={{ textAlign: "right", color: "#f57224" }}
             className="col-4"
           >
-            đ 0
+            {DATA.Total}
           </div>
         </div>
         <button type="submit" style={{ width: "100%" }} class="btn-submit-cart">
