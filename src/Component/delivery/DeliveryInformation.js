@@ -1,6 +1,17 @@
 import React from "react";
 import Payment from "./payment/Payment";
+import { styled } from "@mui/system";
 
+const FormWrapper = styled("form")({
+  display: "flex",
+  flexDirection: "column",
+  marginTop: "10px",
+});
+const FormButtonWrapper = styled("div")({
+  display: "flex",
+  justifyContent: "flex-end",
+  marginRight: "30px",
+});
 export default function DeliveryInformation() {
   return (
     <form>
@@ -71,13 +82,23 @@ export default function DeliveryInformation() {
                   OFFICE
                 </button>
 
-                <button type="button" class="btn btn-outline-danger m-2 p-3">
+                <button type="button" class="btn btn-outline-danger m-2 p-3 ">
                   HOME
                 </button>
               </div>
-              <button type="button" className=" btn bg-info d-flex">
-                SAVE
-              </button>
+              <FormWrapper>
+                <FormButtonWrapper>
+                  <button
+                    type="submit"
+                    className=" bg-info border-0 p-2"
+                    style={{
+                      width: "150px",
+                    }}
+                  >
+                    Save
+                  </button>
+                </FormButtonWrapper>
+              </FormWrapper>
             </div>
           </div>
         </div>

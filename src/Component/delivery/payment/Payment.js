@@ -1,6 +1,27 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { styled } from "@mui/system";
 
+const DetailWrapper = styled("div")({
+  flexDirection: "column",
+  gap: "10px",
+});
+
+const FormWrapper = styled("div")({
+  gap: "10px",
+  flexWrap: "wrap",
+  borderBottom: "1px solid rgb(216, 216, 216) ",
+});
+
+const DetailItemWrapper = styled("div")({
+  display: "flex",
+  gap: "8px",
+  justifyContent: "space-between",
+});
+
+const DetailLabel = styled("p")({
+  color: "#707070",
+});
 const Payment = () => {
   return (
     <form>
@@ -13,7 +34,7 @@ const Payment = () => {
               backgroundColor: "rgb(216, 216, 216)",
             }}
           >
-            <h4> PROCEED TO PAYMENT</h4>
+            <label> PROCEED TO PAYMENT</label>
           </div>
           <div className="d-flex">
             <div className="right col p-2">
@@ -66,9 +87,10 @@ const Payment = () => {
                   </div>
                   <div className="mt-2">
                     <div
-                      className="border border-light "
+                      // className="border-1 border-light "
                       style={{
                         borderRadius: "5px",
+                        border: "1px solid rgb(216, 216, 216) ",
                       }}
                     >
                       <div
@@ -89,14 +111,17 @@ const Payment = () => {
                           Cash On Delivery
                         </label>
                       </div>
-                      <label className="py-2 px-2">Tap to add card</label>
+                      <div
+                        style={{
+                          borderTop: "1px solid rgb(216, 216, 216)",
+                        }}
+                      >
+                        <label className="py-2 px-2">Tap to add card</label>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <label for="exampleFormControlInput1">Voucher</label>
-              <div className="d-flex"></div>
               <div
                 className="d-flex py-2"
                 style={{
@@ -104,7 +129,7 @@ const Payment = () => {
                 }}
               >
                 <label for="exampleFormControlInput1">
-                  Select Payment Method
+                  Invoice and Contact Info
                 </label>
                 <a
                   href="#"
@@ -119,6 +144,35 @@ const Payment = () => {
               <div>
                 <label for="exampleFormControlInput1">Order Summary</label>
                 <div className="d-flex"></div>
+              </div>
+              <DetailWrapper>
+                <FormWrapper>
+                  <DetailItemWrapper>
+                    <DetailLabel>Subtotal (4 Items):</DetailLabel>
+                    <p>₫ 3,196,000</p>
+                  </DetailItemWrapper>
+                  <DetailItemWrapper>
+                    <DetailLabel>Shipping Fee:</DetailLabel>
+                    <p>₫ 144,000</p>
+                  </DetailItemWrapper>
+                  <DetailItemWrapper>
+                    <DetailLabel>Shipping Fee Discount:</DetailLabel>
+                    <p>-₫ 30,000</p>
+                  </DetailItemWrapper>
+                </FormWrapper>
+                <DetailItemWrapper>
+                  <DetailLabel>Total:</DetailLabel>
+                  <p className="text-danger">₫ 3,310,000</p>
+                </DetailItemWrapper>
+              </DetailWrapper>
+              <div
+                className=" my-2 text-center p-2"
+                style={{
+                  color: "white",
+                  backgroundColor: "rgb(216, 216, 216)",
+                }}
+              >
+                <label> PROCEED TO PAYMENT</label>
               </div>
             </div>
           </div>
