@@ -1,6 +1,7 @@
 import React from "react";
+import axios from "axios";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useEffect } from "react";
 
 export default function RightContainer(props) {
   const { total } = props;
@@ -9,7 +10,32 @@ export default function RightContainer(props) {
     Subtotal: 1908000,
     Total: 1920000,
   };
-  console.log(">>>>>>>>>>>>>>>>DATA LÀ", DATA);
+  const [responseData, setResponseData] = React.useState([]);
+  const fetchData = React.useCallback(() => {
+    axios({
+      method: "GET",
+      url: "https://fakestoreapi.com/products/1",
+      headers: {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host": "quotes15.p.rapidapi.com",
+        "x-rapidapi-key": process.env.REACT_APP_API_KEY,
+      },
+      params: {
+        language_code: "en",
+      },
+    })
+      .then((response) => {
+        setResponseData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
+  console.log(">>>>>>>>>>>>>data la", responseData);
   return (
     <form>
       <div className="container RightContainer ">
@@ -38,7 +64,7 @@ export default function RightContainer(props) {
             Shipping Fee
           </div>
           <div style={{ textAlign: "right" }} className="col-3">
-            {DATA.ShippingFee}
+            {responseData.price}
           </div>
         </div>
         <div className="row">
@@ -54,7 +80,8 @@ export default function RightContainer(props) {
             Subtotal (0 items)
           </div>
           <div style={{ textAlign: "right" }} className="col-3">
-            {DATA.Subtotal}
+            {/* {DATA.Subtotal} */}
+            {/* {responseData.rating.rate} */}
           </div>
         </div>
         <div className="row">
@@ -73,7 +100,7 @@ export default function RightContainer(props) {
             style={{ textAlign: "right", color: "#f57224" }}
             className="col-4"
           >
-            {DATA.Total}
+            {/* {responseData.rating.count} */}
           </div>
         </div>
         <button type="submit" style={{ width: "100%" }} class="btn-submit-cart">
